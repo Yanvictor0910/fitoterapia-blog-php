@@ -1,0 +1,174 @@
+@font-face {
+    font-family: Inria;
+    src: url(../css/fonts/InriaSerif-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Inria;
+    justify-content: center;
+}
+
+body{
+    background: #E5E5E5;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.container{
+    max-width: 1440px;
+    margin: auto;
+}
+
+.text-green{
+    color: #30582F;
+}
+
+.text-center{
+    text-align: center;
+}
+
+header{
+    background-color: #7FA842;
+    padding: 20px;
+}
+
+header .logo{
+    text-align: center;
+    max-width: 30%;
+}
+
+header .logo h1{
+    font-size: 2.8em;
+}
+
+header .logo a{
+    color: #fff;
+    text-decoration:none !important;  
+}
+
+header .navbar{
+    max-width: 70%;
+    height: 100%;
+}
+
+header .navbar a{
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none!important;
+    margin-left: 15px;
+}
+
+header .navbar a:hover{
+    color: rgb(4, 39, 10);
+}
+
+.header-bg{
+    height: 450px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../images/fitoterapia.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+}
+
+section{
+    padding: 80px 0;
+}
+
+.title h2{
+    font-size: 48px;
+}
+
+.description p {
+    font-size: 22px;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 20px;
+    line-height: 26px;
+}
+
+.bg-benefits{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/bg-benefits.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff!important;
+}
+
+footer{
+    background-color: #7FA842;
+    color: #fff;
+    font-size: 24px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.form-default{
+    width: 50%;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.form-default label{
+   font-size: 20px;
+   color: #30582F;
+}
+
+.form-default input{
+    display: block;
+    width: 100%;
+    margin: 20px 0 20px 0;
+    height: 40px;
+    background: transparent;
+    outline: 0!important;
+    border: 2px solid #7FA842;
+}
+
+.form-default textarea{
+    display: block;
+    width: 100%;
+    margin: 20px 0 20px 0;
+    height: 150px;
+    background: transparent;
+    border: 2px solid #7FA842;
+    outline: 0!important;
+}
+
+
+.form-default button{
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: #7FA842;
+    color: #ffff;
+    border: 1px solid transparent;
+    
+}
+
+.form-default button:hover{
+    background-color: #30582F;
+    cursor: pointer;
+}
