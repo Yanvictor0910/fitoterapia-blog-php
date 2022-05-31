@@ -1,3 +1,4 @@
+<?php require_once 'config.php' ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,8 +16,10 @@
             </div>
             <div class="navbar">
                 <nav>
-                    <a href="./blog.php">Blog</a>
-                    <a href="./contato.php">Contato</a>
+                    <a href="./create-category.php">Criar Categoria</a>
+                    <a href="./create-article.php">Adicionar Artigo</a>
+                    <a href="./articles.php">Artigos</a>
+                    <a href="./contact.php">Contato</a>
                 </nav>
             </div>
         </div>
