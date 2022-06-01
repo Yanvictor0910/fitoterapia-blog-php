@@ -1,13 +1,12 @@
 <?php 
-require_once './partials/header.php';
+require_once '../partials/header.php';
 session_start();
 ?>
 
-
-<section>
+<section class="push-footer-bottom">
     <div class="container d-flex flex-column justify-content-center">
         <div class="title text-center">
-            <h2 class="text-green">Contato</h2>  
+            <h2 class="text-green">Criar Categoria</h2>
             <div class="row justify-content-center">
                 <div class="col-6">
                     <?php if ( $_SESSION['error']): ?>
@@ -16,7 +15,7 @@ session_start();
                         <?=$_SESSION['error'] = ''; ?>
                     </div>
                     <?php endif;?>     
-                    <?php if ( isset($_SESSION['success']) ): ?>
+                    <?php if ( $_SESSION['success']): ?>
                         <div class="message-success">
                             <?=$_SESSION['success']; ?>
                             <?=$_SESSION['success'] = ''; ?>
@@ -25,18 +24,14 @@ session_start();
                 </div>
             </div> 
         </div>
-        <div class="form-default">
-                <form action="./receive_forms/receive-contact.php" method="post">
-                <label for="name">Seu Nome:</label>
-                <input type="text" name="name" id="name">
-                <label for="email">Seu E-mail:</label>
-                <input type="text" name="email" id="email">
-                <label for="email">Informe o assunto que se trata:</label>
-                <textarea name="content" id=""></textarea>
+        <div class="form-default mb-40">
+                <form action="../receive_forms/receive-category.php" method="post">
+                <label for="title">Título:</label>
+                <input type="text" name="title" id="title">
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
 </section>
 
-<?php require_once './partials/footer.php'; ?>
+<?php require_once '../partials/footer.php'; ?>

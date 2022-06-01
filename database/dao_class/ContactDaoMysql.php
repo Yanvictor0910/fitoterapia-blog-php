@@ -1,24 +1,24 @@
 <?php
 
-require '../database/models/Contact.php';
+include './../functions.php';
 
-class ContactDaoMysql implements DatabaseMethods{
+class ContactDaoMysql implements ContactMethods{
     private $pdo;
 
     public function __construct($engine){
         $this->pdo = $engine;
     }
 
-    public function create(Contact $contactData){
+    public function create(Contact $data){
         $sql = $this->pdo->prepare("INSERT INTO `contacts` (`name`, `email`, `content`) VALUES (:name, :email, :content) ");
-        $sql->bindValue(':name', $contactData->getName());
-        $sql->bindValue(':email', $contactData->getEmail());
-        $sql->bindValue(':content', $contactData->getContent());
+        $sql->bindValue(':name', $data->getName());
+        $sql->bindValue(':email', $data->getEmail());
+        $sql->bindValue(':content', $data->getContent());
         $sql->execute();
 
-        $contactData->setID($this->pdo->lastInsertId());
+        $data->setID($this->pdo->lastInsertId());
 
-        return $contact;
+        return $data;
     }
 
     public function findAll(){
@@ -42,12 +42,12 @@ class ContactDaoMysql implements DatabaseMethods{
         return $array;
     }
 
-    public function update(Contact $contactData){
+    public function update(Contact $data){
         $sql = $this->pdo->prepare("UPDATE `contacts` SET `name` = :name, `email` = :email, `content` = :content WHERE id = :id ");
-        $sql->bindValue(":name", $contactData['name']);
-        $sql->bindValue(":email", $contactData['email']);
-        $sql->bindValue(":content", $contactData['content']);
-        $sql->bindValue(":id", $contactData['id']);
+        $sql->bindValue(":name", $data['name']);
+        $sql->bindValue(":email", $data['email']);
+        $sql->bindValue(":content", $data['content']);
+        $sql->bindValue(":id", $data['id']);
         $sql->execute();
 
         return true;

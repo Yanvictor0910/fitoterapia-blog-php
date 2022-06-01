@@ -1,6 +1,6 @@
 <?php
 
-require_once '../database/DatabaseMethods.php';
+
 
 class Contact{
     private $id;
@@ -39,6 +39,13 @@ class Contact{
     public function getContent(){
         return $this->content;
     }
+}
+
+interface ContactMethods{
+    public function create(Contact $data);
+    public function findAll();
+    public function update(Contact $data);
+    public function delete($id);
 }
 
 ?>

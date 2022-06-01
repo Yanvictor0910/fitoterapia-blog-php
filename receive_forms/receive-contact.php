@@ -1,6 +1,6 @@
 <?php
-require_once '../database/database.php';
-require_once '../database/dao_class/ContactDaoMysql.php';
+require '../DBclass.php';
+
 
 session_start();
 
@@ -19,9 +19,9 @@ if($name && $email && $content){
     $contactDao->create($contact);
 
     $_SESSION['success'] = 'Formulário Enviado com Sucesso';
-    header("Location: ../contact.php");
+    header("Location: ../pages/contact.php");
 }else{
     $_SESSION['error'] = 'Preencha todos os campos corretamente, por favor.';
-    header ("location: ../contact.php");
+    header ("location: ../pages/contact.php");
     exit;
 }

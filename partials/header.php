@@ -1,4 +1,4 @@
-<?php require_once 'config.php' ?>
+<?php require_once '../config.php' ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitoterapia</title>
-    <link rel="stylesheet" href="<?=$static?>/css/style.css">
+    <link rel="stylesheet" href="../<?=$static?>/css/style.css">
 </head>
 <body>
     <header>
         <div class="container align-items-center d-flex justify-content-between">
             <div class="logo">
-                <a href="index.php"><h1>Fitoterapia</h1></a>
+                <a href="./home.php"><h1>Fitoterapia</h1></a>
             </div>
             <div class="navbar">
                 <nav>
