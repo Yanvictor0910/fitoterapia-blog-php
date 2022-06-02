@@ -35,7 +35,7 @@ if ($search){
             <?php endif;?>  
         </div>
         <div class="row justify-content-end mb-30">
-            <div class="col-3">
+            <div class="col-4">
                 <div class="search-form">
                 <form action="./articles.php" method="GET">
                     <input name="search" type="text" value="<?=$search ?>">
@@ -50,7 +50,7 @@ if ($search){
                     <div class="col-4 mb-30">
                         <div class="box-article d-flex align-items-center justify-content-center flex-column">
                             <div class="title mb-40">
-                                <h3 class="text-green"><?=$item->getTitle(); ?></h3>
+                                <h3 class="text-green"><?= strlen($item->getTitle()) > 80 ? substr($item->getTitle(), 0, 80).'...' : $item->getTitle() ?></h3>
                             </div>
                             <a href="./article-detail.php?id=<?=$item->getID(); ?>" class="btn-default">LER MAIS</a>
                         </div>

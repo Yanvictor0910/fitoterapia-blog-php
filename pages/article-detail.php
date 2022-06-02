@@ -22,7 +22,7 @@ if($id){
     <div class="container">
         <div class="title text-center">
             <h2 class="text-green"><?=$article->getTitle(); ?></h2>
-            <p class="text-right subtitle">Categoria: <span><?=$category->getTitle(); ?></span></p>
+            <p class="text-right mt-30 mb-30 font-bold mr-20 subtitle">Categoria: <span><?=$category->getTitle(); ?></span></p>
         </div>
         <div class="row">
             <div class="col-12">
